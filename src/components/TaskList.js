@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { TaskCard } from './TaskCard';
+import { BoxCard } from './BoxCard';
 
 
 export const TaskList = (props) => {
@@ -21,8 +22,21 @@ export const TaskList = (props) => {
             {show && tasks.map((task) => (
                 <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
             ))}
-            
         </ul>
+
+        <BoxCard result="success">
+        <p className="title">Hello World</p>
+        <p className="description">World is beautiful.</p>
+        </BoxCard>
+
+        <BoxCard result="warning">
+            <p className="title">Hello Nepal</p>
+            <p className="description">Nepal is beautiful.</p>
+        </BoxCard>
+        <BoxCard result="alert">
+            <p className="title">Hello Canada</p>
+            <p className="description">Canada is beautiful.</p>
+        </BoxCard>
     </>
   )
 }
