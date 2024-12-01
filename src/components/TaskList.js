@@ -1,9 +1,11 @@
 import {useState} from 'react';
 import { TaskCard } from './TaskCard';
 import { BoxCard } from './BoxCard';
+import styles from "./TaskList.module.css";
+import "./TaskList.css";
 
 
-export const TaskList = (props) => {
+export const TaskList = ({xyz}) => {
     const [tasks, setTasks] = useState([
         {id: 3341, name: "Record Lectures", completed: false}, 
         {id: 1456, name: "Watch Lectures", completed: true}, 
@@ -15,12 +17,12 @@ export const TaskList = (props) => {
         setTasks(tasks.filter(task => task.id !== id));
     }
   return (
-    <>
+    <div className="taskList">
         <ul className="rowList">
-            <h1>Task List {props.title} {props.subtitle}</h1>
-            <button className="trigger" onClick={() => setShow(!show)}>Toggle</button>
+            <h1 className={styles.title}>Task List</h1>
+            <button className="trigger" onClick={() => setShow(!show)}>{show ? "Hide" : "Show" }</button>
             {show && tasks.map((task) => (
-                <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
+                <TaskCard key={task.id} abc={xyz} task={task} handleDelete={handleDelete}/>
             ))}
         </ul>
 
@@ -28,15 +30,6 @@ export const TaskList = (props) => {
         <p className="title">Hello World</p>
         <p className="description">World is beautiful.</p>
         </BoxCard>
-
-        <BoxCard result="warning">
-            <p className="title">Hello Nepal</p>
-            <p className="description">Nepal is beautiful.</p>
-        </BoxCard>
-        <BoxCard result="alert">
-            <p className="title">Hello Canada</p>
-            <p className="description">Canada is beautiful.</p>
-        </BoxCard>
-    </>
+    </div>
   )
 }

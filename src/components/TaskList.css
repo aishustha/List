@@ -1,0 +1,36 @@
+/* box card */
+.rowList{
+    text-align: center;
+    padding-left: 0px;
+    margin: 0px 50px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px;
+}
+
+.rowList li {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 20px;
+}
+
+.rowList li.completed {
+    box-shadow: rgb(48, 114, 0) 0px 1px 4px;
+}
+
+.rowList li.incomplete {
+    box-shadow: rgb(135,20, 0, 0.689) 0px 1px 4px;
+}
+
+button.trigger {
+    background-color: var(--theme-blue);
+    color: white;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}

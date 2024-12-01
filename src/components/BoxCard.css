@@ -1,0 +1,18 @@
+.box {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    margin-bottom: 20px;
+}
+
+.box.success {
+    background: #abdcab;
+}
+.box.warning {
+    background-color: #ffdeb4;
+}
+.box.alert {
+    background-color: #ffb4b4;
+}

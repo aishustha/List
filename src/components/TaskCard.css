@@ -1,0 +1,9 @@
+
+.rowList .btnDel {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    padding: 5px 20px;
+}
