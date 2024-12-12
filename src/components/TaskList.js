@@ -5,12 +5,8 @@ import styles from "./TaskList.module.css";
 import "./TaskList.css";
 
 
-export const TaskList = ({xyz}) => {
-    const [tasks, setTasks] = useState([
-        {id: 3341, name: "Record Lectures", completed: false}, 
-        {id: 1456, name: "Watch Lectures", completed: true}, 
-        {id: 6781, name: "Live Lectures", completed: true}]);
-
+export const TaskList = ({tasks, setTasks}) => {
+   
     const [show, setShow] = useState(true);
 
     function handleDelete(id) {
@@ -22,7 +18,7 @@ export const TaskList = ({xyz}) => {
             <h1 className={styles.title}>Task List</h1>
             <button className="trigger" onClick={() => setShow(!show)}>{show ? "Hide" : "Show" }</button>
             {show && tasks.map((task) => (
-                <TaskCard key={task.id} abc={xyz} task={task} handleDelete={handleDelete}/>
+                <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
             ))}
         </ul>
 
