@@ -13,7 +13,7 @@ export const TaskList = ({tasks, setTasks}) => {
         setTasks(tasks.filter(task => task.id !== id));
     }
   return (
-    <div className="taskList">
+    <section className="taskList">
         <ul className="rowList">
             <h1 className={styles.title}>Task List</h1>
             <button className="trigger" onClick={() => setShow(!show)}>{show ? "Hide" : "Show" }</button>
@@ -26,6 +26,6 @@ export const TaskList = ({tasks, setTasks}) => {
         <p className="title">Hello World</p>
         <p className="description">World is beautiful.</p>
         </BoxCard>
-    </div>
+    </section>
   )
 }
